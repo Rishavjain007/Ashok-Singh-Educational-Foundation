@@ -1,0 +1,1031 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ashok Singh Educational Foundation | Deoghar, Jharkhand</title>
+    <meta name="description" content="Empowering students and communities through education. Ashok Singh Educational Foundation, Deoghar.">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+    <!-- FontAwesome for Icons (CDN) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        /* --- CSS VARIABLES & RESET --- */
+        :root {
+            --primary-navy: #0e2a47;   /* Deep Navy for Trust */
+            --secondary-teal: #2a9d8f; /* Teal for Growth/Education */
+            --accent-orange: #e76f51;  /* Orange for Energy/CTA */
+            --light-gray: #f8f9fa;
+            --text-dark: #333333;
+            --text-light: #666666;
+            --white: #ffffff;
+            --shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--light-gray);
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--primary-navy);
+            margin-bottom: 1rem;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: var(--transition);
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* --- UTILITIES --- */
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            border-radius: 50px;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            cursor: pointer;
+            border: none;
+            transition: var(--transition);
+        }
+
+        .btn-primary {
+            background-color: var(--accent-orange);
+            color: var(--white);
+            box-shadow: 0 4px 10px rgba(231, 111, 81, 0.4);
+        }
+
+        .btn-primary:hover {
+            background-color: #d65a3b;
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            border: 2px solid var(--white);
+            color: var(--white);
+            background: transparent;
+        }
+
+        .btn-outline:hover {
+            background-color: var(--white);
+            color: var(--primary-navy);
+        }
+
+        .section-padding {
+            padding: 80px 0;
+        }
+
+        .text-center { text-align: center; }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+            position: relative;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background-color: var(--accent-orange);
+            margin: 15px auto 0;
+            border-radius: 2px;
+        }
+
+        /* --- NAVIGATION --- */
+        header {
+            background-color: var(--white);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 80px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-navy);
+        }
+
+        .logo i {
+            color: var(--secondary-teal);
+            margin-right: 10px;
+            font-size: 2rem;
+        }
+
+        .logo span {
+            color: var(--accent-orange);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-links li a {
+            font-weight: 600;
+            color: var(--primary-navy);
+            font-size: 0.95rem;
+            position: relative;
+        }
+
+        .nav-links li a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: var(--accent-orange);
+            transition: width 0.3s;
+        }
+
+        .nav-links li a:hover::after,
+        .nav-links li a.active::after {
+            width: 100%;
+        }
+
+        .nav-links li a.active {
+            color: var(--secondary-teal);
+        }
+
+        .menu-toggle {
+            display: none;
+            font-size: 1.5rem;
+            color: var(--primary-navy);
+            cursor: pointer;
+        }
+
+        /* --- PAGE SECTIONS (SPA Logic) --- */
+        .page-section {
+            display: none; /* Hidden by default */
+            animation: fadeIn 0.6s ease-in-out;
+            min-height: 80vh;
+        }
+
+        .page-section.active-section {
+            display: block; /* Show when active */
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* --- HOME SECTION --- */
+        .hero {
+            background: linear-gradient(rgba(14, 42, 71, 0.85), rgba(14, 42, 71, 0.7)), url('https://etimg.etb2bimg.com/thumb/msid-75729537,width-1200,height-900,resizemode-4/.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 90vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--white);
+            padding: 0 20px;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            color: var(--white);
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 30px;
+            color: #e0e0e0;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .features {
+            background-color: var(--white);
+            padding-bottom: 50px;
+            margin-top: -50px;
+            position: relative;
+            z-index: 10;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .feature-card {
+            background: var(--white);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+            text-align: center;
+            transition: var(--transition);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            color: var(--secondary-teal);
+            margin-bottom: 20px;
+        }
+
+        /* --- ABOUT US --- */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .about-img img {
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+        }
+
+        .founders {
+            background-color: var(--white);
+            margin-top: 50px;
+        }
+
+        .founder-card {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            background: var(--light-gray);
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .founder-img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--accent-orange);
+        }
+
+        /* --- PROGRAMS --- */
+        .program-card {
+            background: var(--white);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            margin-bottom: 30px;
+        }
+
+        .program-body {
+            padding: 30px;
+        }
+
+        .program-body h3 {
+            color: var(--secondary-teal);
+        }
+
+        /* --- GALLERY --- */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            height: 250px;
+            cursor: pointer;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: linear-gradient(transparent, rgba(14, 42, 71, 0.9));
+            padding: 20px;
+            color: var(--white);
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item:hover .overlay {
+            transform: translateY(0);
+        }
+
+        /* --- CONTACT --- */
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            gap: 40px;
+            background: var(--white);
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+        }
+
+        .contact-info-box {
+            background-color: var(--primary-navy);
+            color: var(--white);
+            padding: 40px;
+            border-radius: 10px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 30px;
+        }
+
+        .contact-item i {
+            font-size: 1.5rem;
+            color: var(--accent-orange);
+            margin-right: 20px;
+            margin-top: 5px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-family: inherit;
+            transition: var(--transition);
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--secondary-teal);
+        }
+
+        /* --- DONATE --- */
+        .donate-hero {
+            background: linear-gradient(135deg, var(--secondary-teal), var(--primary-navy));
+            color: var(--white);
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .impact-stats {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 40px;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--accent-orange);
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            background-color: var(--primary-navy);
+            color: var(--white);
+            padding: 60px 0 20px;
+            margin-top: 80px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h3 {
+            color: var(--white);
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+
+        .footer-col p {
+            color: #ccc;
+            margin-bottom: 15px;
+        }
+
+        .social-links a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255,255,255,0.1);
+            text-align: center;
+            line-height: 40px;
+            border-radius: 50%;
+            margin-right: 10px;
+            transition: var(--transition);
+        }
+
+        .social-links a:hover {
+            background-color: var(--accent-orange);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 20px;
+            text-align: center;
+            font-size: 0.9rem;
+            color: #aaa;
+        }
+
+        /* --- TOAST NOTIFICATION --- */
+        .toast {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: var(--secondary-teal);
+            color: var(--white);
+            padding: 15px 25px;
+            border-radius: 5px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            transform: translateY(100px);
+            opacity: 0;
+            transition: all 0.5s ease;
+            z-index: 2000;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .toast.show {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        /* --- RESPONSIVE --- */
+        @media (max-width: 992px) {
+            .hero h1 { font-size: 2.8rem; }
+            .about-grid, .contact-container { grid-template-columns: 1fr; }
+            .hero-buttons { flex-direction: column; }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                position: absolute;
+                top: 80px;
+                left: 0;
+                width: 100%;
+                background-color: var(--white);
+                flex-direction: column;
+                padding: 20px;
+                box-shadow: 0 10px 10px rgba(0,0,0,0.05);
+                transform: translateY(-150%);
+                transition: transform 0.4s ease;
+                gap: 15px;
+            }
+
+            .nav-links.active {
+                transform: translateY(0);
+            }
+
+            .menu-toggle { display: block; }
+            
+            .contact-info-box { padding: 20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <i class="fas fa-graduation-cap"></i>
+                    <div>ASEF <span>Foundation</span></div>
+                </div>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="#" onclick="showPage('home')" class="nav-item active">Home</a></li>
+                    <li><a href="#" onclick="showPage('about')" class="nav-item">About Us</a></li>
+                    <li><a href="#" onclick="showPage('programs')" class="nav-item">Programs</a></li>
+                    <li><a href="#" onclick="showPage('gallery')" class="nav-item">Gallery</a></li>
+                    <li><a href="#" onclick="showPage('donate')" class="nav-item">Donate</a></li>
+                    <li><a href="#" onclick="showPage('contact')" class="nav-item">Contact Us</a></li>
+                </ul>
+                <div class="menu-toggle" id="menuToggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- MAIN CONTENT AREA -->
+    <main id="mainContent">
+
+        <!-- 1. HOME PAGE -->
+        <section id="home" class="page-section active-section">
+            <div class="hero">
+                <div>
+                    <h1>Empowering Minds,<br>Building Futures</h1>
+                    <p>Ashok Singh Educational Foundation is dedicated to bridging the gap in education and social development in Deoghar, Jharkhand.</p>
+                    <div class="hero-buttons">
+                        <button class="btn btn-primary" onclick="showPage('about')">Learn More</button>
+                        <button class="btn btn-outline" onclick="showPage('contact')">Contact Us</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container features">
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <i class="fas fa-book-reader feature-icon"></i>
+                        <h3>Quality Education</h3>
+                        <p>Providing resources and support to ensure every child has access to quality learning materials.</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-hands-helping feature-icon"></i>
+                        <h3>Community Support</h3>
+                        <p>Engaging with local communities to drive holistic social development and empowerment.</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-seedling feature-icon"></i>
+                        <h3>Skill Development</h3>
+                        <p>Offering programs that go beyond textbooks, focusing on life skills and vocational training.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. ABOUT US PAGE -->
+        <section id="about" class="page-section">
+            <div class="container section-padding">
+                <div class="section-title">
+                    <h2>About The Foundation</h2>
+                    <p>A beacon of hope in Deoghar, Jharkhand.</p>
+                </div>
+
+                <div class="about-grid">
+                    <div class="about-text">
+                        <h3>Who We Are</h3>
+                        <p style="margin-bottom: 15px;">The Ashok Singh Educational Foundation (ASEF) is a non-profit educational trust committed to the upliftment of society through the power of education. Founded with the core belief that knowledge is the key to breaking the cycle of poverty, we strive to provide opportunities to underprivileged students.</p>
+                        <p>Based in the spiritual city of Deoghar, Jharkhand, our work focuses on bridging educational gaps and fostering an environment where learning is accessible to all.</p>
+                        
+                        <div style="margin-top: 20px;">
+                            <ul style="list-style: none;">
+                                <li style="margin-bottom: 10px;"><i class="fas fa-check-circle" style="color: var(--secondary-teal); margin-right: 10px;"></i> Inclusive Education Policy</li>
+                                <li style="margin-bottom: 10px;"><i class="fas fa-check-circle" style="color: var(--secondary-teal); margin-right: 10px;"></i> Community-Driven Approach</li>
+                                <li><i class="fas fa-check-circle" style="color: var(--secondary-teal); margin-right: 10px;"></i> Transparency & Integrity</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="about-img">
+                        <img src="https://picsum.photos/seed/ashokfoundation/600/400" alt="Students learning">
+                    </div>
+                </div>
+
+                <!-- Founders Section -->
+                <div class="founders">
+                    <div class="section-title">
+                        <h3>Our Founders</h3>
+                    </div>
+                    <div class="feature-grid">
+                        <div class="founder-card">
+                            <img src="https://picsum.photos/seed/founder1/150/150" alt="Ashok Kumar Singh" class="founder-img">
+                            <div>
+                                <h4>Ashok Kumar Singh</h4>
+                                <p style="color: var(--secondary-teal); font-size: 0.9rem;">Founder</p>
+                                <p style="font-size: 0.9rem;">A visionary leader with a passion for social reform and educational equity.</p>
+                            </div>
+                        </div>
+                        <div class="founder-card">
+                            <img src="https://picsum.photos/seed/founder2/150/150" alt="Krishna Kumar Singh" class="founder-img">
+                            <div>
+                                <h4>Krishna Kumar Singh</h4>
+                                <p style="color: var(--secondary-teal); font-size: 0.9rem;">Co-Founder</p>
+                                <p style="font-size: 0.9rem;">Dedicated to operational excellence and community outreach programs.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. PROGRAMS PAGE -->
+        <section id="programs" class="page-section">
+            <div class="container section-padding">
+                <div class="section-title">
+                    <h2>Our Programs & Services</h2>
+                    <p>Comprehensive initiatives designed for growth.</p>
+                </div>
+
+                <div class="feature-grid">
+                    <div class="program-card">
+                        <img src="https://picsum.photos/seed/books/600/300" alt="Scholarship Program">
+                        <div class="program-body">
+                            <h3><i class="fas fa-award"></i> Merit Scholarships</h3>
+                            <p>Financial aid provided to meritorious students from economically weaker sections to help them continue their higher education without financial burden.</p>
+                        </div>
+                    </div>
+                    <div class="program-card">
+                        <img src="https://picsum.photos/seed/library/600/300" alt="Library Support">
+                        <div class="program-body">
+                            <h3><i class="fas fa-book"></i> Library & Resources</h3>
+                            <p>We establish and maintain small libraries in rural areas, providing textbooks, reference materials, and storybooks to encourage reading habits.</p>
+                        </div>
+                    </div>
+                    <div class="program-card">
+                        <img src="https://picsum.photos/seed/workshop/600/300" alt="Skill Workshops">
+                        <div class="program-body">
+                            <h3><i class="fas fa-tools"></i> Vocational Training</h3>
+                            <p>Skill development workshops for youth and women to enhance employability, including computer basics, handicrafts, and agricultural techniques.</p>
+                        </div>
+                    </div>
+                    <div class="program-card">
+                        <img src="https://picsum.photos/seed/charity/600/300" alt="Community Aid">
+                        <div class="program-body">
+                            <h3><i class="fas fa-hands-helping"></i> Community Aid</h3>
+                            <p>Distribution of school uniforms, bags, and stationery to remote village schools to ensure students have the basic tools for learning.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. GALLERY PAGE -->
+        <section id="gallery" class="page-section">
+            <div class="container section-padding">
+                <div class="section-title">
+                    <h2>Gallery & Activities</h2>
+                    <p>Glimpses of our work in action.</p>
+                </div>
+                
+                <div class="gallery-grid">
+                    <div class="gallery-item">
+                        <img src="https://picsum.photos/seed/edu1/400/300" alt="Education Camp">
+                        <div class="overlay">
+                            <h4>Education Camp</h4>
+                            <p>Rural outreach initiative</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://picsum.photos/seed/edu2/400/300" alt="Book Distribution">
+                        <div class="overlay">
+                            <h4>Book Distribution</h4>
+                            <p>Providing resources to schools</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://picsum.photos/seed/edu3/400/300" alt="Annual Function">
+                        <div class="overlay">
+                            <h4>Annual Function</h4>
+                            <p>Celebrating student talent</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://picsum.photos/seed/edu4/400/300" alt="Founder Speech">
+                        <div class="overlay">
+                            <h4>Founder Speech</h4>
+                            <p>Motivating the youth</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://picsum.photos/seed/edu5/400/300" alt="Plantation Drive">
+                        <div class="overlay">
+                            <h4>Plantation Drive</h4>
+                            <p>Environmental awareness</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://picsum.photos/seed/edu6/400/300" alt="Prize Distribution">
+                        <div class="overlay">
+                            <h4>Prize Distribution</h4>
+                            <p>Honoring excellence</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. CONTACT US PAGE -->
+        <section id="contact" class="page-section">
+            <div class="container section-padding">
+                <div class="section-title">
+                    <h2>Contact Us</h2>
+                    <p>Get in touch with Ashok Singh Educational Foundation.</p>
+                </div>
+
+                <div class="contact-container">
+                    <!-- Contact Info -->
+                    <div class="contact-info-box">
+                        <h3 style="color: var(--white); margin-bottom: 25px;">Contact Information</h3>
+                        
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h4>Address</h4>
+                                <p>Deoghar, Jharkhand,<br>India</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <i class="fas fa-phone-alt"></i>
+                            <div>
+                                <h4>Phone Numbers</h4>
+                                <p>+91 9749417834</p>
+                                <p>+91 9434383946</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h4>Email</h4>
+                                <p>info@ashoksinghfoundation.org</p>
+                            </div>
+                        </div>
+
+                        <!-- Embedded Google Map Placeholder -->
+                        <div style="margin-top: 30px; border-radius: 8px; overflow: hidden;">
+                            <iframe 
+                                width="100%" 
+                                height="200" 
+                                frameborder="0" 
+                                scrolling="no" 
+                                marginheight="0" 
+                                marginwidth="0" 
+                                src="https://maps.google.com/maps?q=Deoghar,%20Jharkhand&t=&z=13&ie=UTF8&iwloc=&output=embed">
+                            </iframe>
+                        </div>
+                    </div>
+
+                    <!-- Contact Form -->
+                    <div class="contact-form">
+                        <h3>Send us a Message</h3>
+                        <p style="margin-bottom: 20px; color: var(--text-light);">Have questions about our programs or want to volunteer? Fill out the form below.</p>
+                        
+                        <form id="contactForm">
+                            <div class="form-group">
+                                <label for="name">Your Name</label>
+                                <input type="text" id="name" class="form-control" placeholder="Enter your full name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email Address</label>
+                                <input type="email" id="email" class="form-control" placeholder="Enter your email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" class="form-control" placeholder="Enter your phone number">
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea id="message" rows="5" class="form-control" placeholder="How can we help you?" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. DONATE PAGE -->
+        <section id="donate" class="page-section">
+            <div class="donate-hero">
+                <div class="container">
+                    <h2>Support Our Cause</h2>
+                    <p>Your contribution can change a life today. Join us in building a better future for the children of Deoghar.</p>
+                    
+                    <div class="impact-stats">
+                        <div class="stat-item">
+                            <div class="stat-number">500+</div>
+                            <p>Students Supported</p>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">20+</div>
+                            <p>Villages Reached</p>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">5</div>
+                            <p>Active Programs</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container section-padding">
+                <div class="section-title">
+                    <h3>Why Your Support Matters</h3>
+                </div>
+                <div class="feature-grid">
+                    <div class="feature-card" style="border-top: 5px solid var(--accent-orange);">
+                        <h4>Direct Impact</h4>
+                        <p>100% of your donations go directly towards educational materials, uniforms, and program logistics.</p>
+                    </div>
+                    <div class="feature-card" style="border-top: 5px solid var(--secondary-teal);">
+                        <h4>Transparency</h4>
+                        <p>We maintain complete financial transparency. Supporters receive annual reports detailing fund utilization.</p>
+                    </div>
+                    <div class="feature-card" style="border-top: 5px solid var(--primary-navy);">
+                        <h4>Long-term Change</h4>
+                        <p>By educating a child, you are empowering a family and uplifting the entire community for generations.</p>
+                    </div>
+                </div>
+
+                <div class="text-center" style="margin-top: 50px;">
+                    <button class="btn btn-primary" onclick="showPage('contact')">Contact to Donate</button>
+                    <p style="margin-top: 15px; font-size: 0.9rem; color: var(--text-light);">For bank transfer details or donation pickups, please contact our office.</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="logo" style="color: var(--white); margin-bottom: 20px;">
+                        <i class="fas fa-graduation-cap" style="color: var(--secondary-teal);"></i>
+                        <div>ASEF <span>Foundation</span></div>
+                    </div>
+                    <p>Empowering the youth of Deoghar through education, social development, and unwavering support.</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#" onclick="showPage('home')">Home</a></li>
+                        <li><a href="#" onclick="showPage('about')">About Us</a></li>
+                        <li><a href="#" onclick="showPage('programs')">Our Programs</a></li>
+                        <li><a href="#" onclick="showPage('contact')">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contact Us</h3>
+                    <p><i class="fas fa-map-marker-alt" style="width: 20px;"></i> Deoghar, Jharkhand, India</p>
+                    <p><i class="fas fa-phone" style="width: 20px;"></i> +91 9749417834</p>
+                    <p><i class="fas fa-phone" style="width: 20px;"></i> +91 9434383946</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Follow Us</h3>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Ashok Singh Educational Foundation. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast">
+        <i class="fas fa-check-circle"></i>
+        <span>Message sent successfully! We will contact you soon.</span>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        // --- Navigation Logic ---
+        function showPage(pageId) {
+            // 1. Hide all sections
+            const sections = document.querySelectorAll('.page-section');
+            sections.forEach(section => {
+                section.classList.remove('active-section');
+            });
+
+            // 2. Show target section
+            const target = document.getElementById(pageId);
+            if (target) {
+                target.classList.add('active-section');
+            }
+
+            // 3. Update Nav Links Active State
+            const navLinks = document.querySelectorAll('.nav-item');
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                // Check if the onclick attribute contains the pageId
+                if(link.getAttribute('onclick').includes(pageId)) {
+                    link.classList.add('active');
+                }
+            });
+
+            // 4. Close mobile menu if open
+            const navUl = document.getElementById('navLinks');
+            navUl.classList.remove('active');
+
+            // 5. Scroll to top
+            window.scrollTo(0, 0);
+        }
+
+        // --- Mobile Menu Toggle ---
+        const menuToggle = document.getElementById('menuToggle');
+        const navUl = document.getElementById('navLinks');
+
+        menuToggle.addEventListener('click', () => {
+            navUl.classList.toggle('active');
+        });
+
+        // --- Contact Form Handling ---
+        const contactForm = document.getElementById('contactForm');
+        
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault(); // Prevent actual submission
+
+            // Show custom toast notification
+            showToast();
+
+            // Reset form
+            contactForm.reset();
+        });
+
+        function showToast() {
+            const toast = document.getElementById('toast');
+            toast.classList.add('show');
+            
+            // Hide after 3 seconds
+            setTimeout(() => {
+                toast.classList.remove('show');
+            }, 3000);
+        }
+
+        // --- Initialize: Ensure Home is active on load ---
+        document.addEventListener('DOMContentLoaded', () => {
+            showPage('home');
+        });
+
+    </script>
+</body>
+</html>
