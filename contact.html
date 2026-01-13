@@ -1,0 +1,1848 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Contact Us | Ashok Singh Educational Foundation - Get in Touch
+    </title>
+    <meta
+      name="description"
+      content="Contact Ashok Singh Educational Foundation in Deoghar, Jharkhand. Reach out for donations, volunteering, partnerships, or general inquiries."
+    />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700;800&family=Inter:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <!-- Favicon -->
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="https://img.icons8.com/color/96/000000/education.png"
+    />
+
+    <style>
+      /* Import the comprehensive CSS */
+      /* Ashok Singh Educational Foundation - Main Stylesheet */
+      /* Color Theme: Blue, Green, White, Orange */
+
+      /* CSS Reset and Base Styles */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      :root {
+        /* Color Variables */
+        --primary-blue: #1e3a8a; /* Deep Blue */
+        --primary-green: #10b981; /* Emerald Green */
+        --accent-orange: #f59e0b; /* Amber Orange */
+        --neutral-light: #f9fafb; /* Light Gray */
+        --neutral-white: #ffffff;
+        --neutral-dark: #1f2937; /* Dark Gray */
+        --neutral-medium: #6b7280; /* Medium Gray */
+
+        /* Font Variables */
+        --font-heading: "Montserrat", sans-serif;
+        --font-body: "Poppins", sans-serif;
+        --font-accent: "Inter", sans-serif;
+
+        /* Spacing Variables */
+        --spacing-xs: 0.5rem;
+        --spacing-sm: 1rem;
+        --spacing-md: 2rem;
+        --spacing-lg: 3rem;
+        --spacing-xl: 5rem;
+
+        /* Border Radius */
+        --radius-sm: 4px;
+        --radius-md: 8px;
+        --radius-lg: 16px;
+
+        /* Box Shadows */
+        --shadow-light: 0 2px 10px rgba(0, 0, 0, 0.1);
+        --shadow-medium: 0 4px 20px rgba(0, 0, 0, 0.15);
+        --shadow-heavy: 0 8px 30px rgba(0, 0, 0, 0.2);
+
+        /* Transitions */
+        --transition-fast: 0.2s ease;
+        --transition-medium: 0.3s ease;
+        --transition-slow: 0.5s ease;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        font-family: var(--font-body);
+        font-size: 16px;
+        line-height: 1.6;
+        color: var(--neutral-dark);
+        background-color: var(--neutral-white);
+        overflow-x: hidden;
+      }
+
+      .container {
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 var(--spacing-sm);
+      }
+
+      /* Typography */
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-family: var(--font-heading);
+        font-weight: 600;
+        line-height: 1.3;
+        margin-bottom: var(--spacing-sm);
+        color: var(--primary-blue);
+      }
+
+      h1 {
+        font-size: 2.2rem;
+      }
+
+      h2 {
+        font-size: 2rem;
+      }
+
+      h3 {
+        font-size: 1.8rem;
+      }
+
+      h4 {
+        font-size: 1.4rem;
+      }
+
+      p {
+        margin-bottom: var(--spacing-sm);
+        font-family: var(--font-body);
+        color: var(--neutral-medium);
+      }
+
+      a {
+        text-decoration: none;
+        color: inherit;
+        transition: var(--transition-fast);
+      }
+
+      ul {
+        list-style: none;
+      }
+
+      /* Buttons */
+      .btn {
+        display: inline-block;
+        padding: 12px 28px;
+        border-radius: var(--radius-md);
+        font-family: var(--font-body);
+        font-weight: 500;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: var(--transition-medium);
+        border: none;
+        text-align: center;
+      }
+
+      .btn-primary {
+        background-color: var(--primary-green);
+        color: var(--neutral-white);
+      }
+
+      .btn-primary:hover {
+        background-color: var(--accent-orange);
+        transform: translateY(-3px);
+        box-shadow: var(--shadow-medium);
+      }
+
+      .btn-secondary {
+        background-color: transparent;
+        color: var(--primary-blue);
+        border: 2px solid var(--primary-blue);
+      }
+
+      .btn-secondary:hover {
+        background-color: var(--primary-blue);
+        color: var(--neutral-white);
+        transform: translateY(-3px);
+        box-shadow: var(--shadow-medium);
+      }
+
+      .btn-small {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+      }
+
+      .text-center {
+        text-align: center;
+      }
+
+      /* Header & Navigation */
+      .header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
+        background-color: var(--neutral-white);
+        box-shadow: var(--shadow-light);
+        padding: 15px 0;
+      }
+
+      .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      /* Logo styling */
+      .logo {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        text-decoration: none;
+      }
+
+      .logo h1 {
+        font-size: 1.4rem;
+        margin: 0;
+        font-weight: 700;
+        color: var(--primary-blue);
+        line-height: 1.2;
+      }
+
+      .logo span {
+        display: block;
+        font-size: 0.7rem;
+        color: var(--primary-green);
+        font-weight: 500;
+        letter-spacing: 1px;
+        margin-top: 2px;
+      }
+
+      .nav-menu {
+        display: flex;
+        gap: var(--spacing-md);
+      }
+
+      .nav-item {
+        position: relative;
+      }
+
+      .nav-link {
+        font-family: var(--font-body);
+        font-weight: 500;
+        color: var(--neutral-dark);
+        padding: 5px 0;
+        font-size: 0.95rem;
+      }
+
+      .nav-link:hover,
+      .nav-link.active {
+        color: var(--primary-green);
+      }
+
+      .nav-link.active::after {
+        content: "";
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background-color: var(--primary-green);
+      }
+
+      .hamburger {
+        display: none;
+        cursor: pointer;
+        flex-direction: column;
+        gap: 4px;
+      }
+
+      .hamburger .bar {
+        display: block;
+        width: 25px;
+        height: 3px;
+        background-color: var(--neutral-dark);
+        transition: var(--transition-medium);
+      }
+
+      /* Page Header */
+      .page-header {
+        background: linear-gradient(
+          135deg,
+          var(--primary-blue) 0%,
+          #1d4ed8 100%
+        );
+        padding: calc(var(--spacing-xl) + 20px) 0;
+        margin-top: 70px;
+        text-align: center;
+        color: var(--neutral-white);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .page-header::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23ffffff' fill-opacity='0.1' fill-rule='evenodd'/%3E%3C/svg%3E");
+      }
+
+      .page-header h2 {
+        font-size: 2.8rem;
+        margin-bottom: var(--spacing-sm);
+        color: var(--neutral-white);
+        position: relative;
+      }
+
+      .page-header p {
+        color: rgba(255, 255, 255, 0.9);
+        font-size: 1.2rem;
+        max-width: 600px;
+        margin: 0 auto;
+      }
+
+      /* Section Styles */
+      .section {
+        padding: var(--spacing-xl) 0;
+      }
+
+      .section-header {
+        text-align: center;
+        max-width: 700px;
+        margin: 0 auto var(--spacing-xl);
+      }
+
+      .section-header h3 {
+        position: relative;
+        display: inline-block;
+        margin-bottom: var(--spacing-sm);
+      }
+
+      .section-header h3::after {
+        content: "";
+        position: absolute;
+        bottom: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80px;
+        height: 3px;
+        background-color: var(--primary-green);
+      }
+
+      /* Contact Information Grid */
+      .info-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: var(--spacing-lg);
+        margin-top: var(--spacing-lg);
+      }
+
+      .info-card {
+        background-color: var(--neutral-white);
+        padding: var(--spacing-lg);
+        border-radius: var(--radius-lg);
+        box-shadow: var(--shadow-light);
+        transition: var(--transition-medium);
+        text-align: center;
+        border-top: 4px solid var(--primary-green);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .info-card:hover {
+        transform: translateY(-10px);
+        box-shadow: var(--shadow-medium);
+      }
+
+      .info-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 4px;
+        background: linear-gradient(
+          90deg,
+          var(--primary-green),
+          var(--accent-orange)
+        );
+      }
+
+      .info-icon {
+        width: 70px;
+        height: 70px;
+        background: linear-gradient(
+          135deg,
+          var(--primary-green),
+          var(--primary-blue)
+        );
+        color: var(--neutral-white);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.8rem;
+        margin: 0 auto var(--spacing-md);
+        transition: var(--transition-medium);
+      }
+
+      .info-card:hover .info-icon {
+        transform: scale(1.1) rotate(5deg);
+      }
+
+      .info-card h4 {
+        color: var(--primary-blue);
+        margin-bottom: var(--spacing-sm);
+        font-size: 1.3rem;
+      }
+
+      .info-card p {
+        color: var(--neutral-medium);
+        margin-bottom: var(--spacing-md);
+        line-height: 1.6;
+      }
+
+      /* Contact Form & Map */
+      .contact-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: var(--spacing-xl);
+      }
+
+      .contact-form-container,
+      .contact-info-container {
+        background-color: var(--neutral-white);
+        padding: var(--spacing-xl);
+        border-radius: var(--radius-lg);
+        box-shadow: var(--shadow-light);
+        transition: var(--transition-medium);
+      }
+
+      .contact-form-container:hover,
+      .contact-info-container:hover {
+        box-shadow: var(--shadow-medium);
+      }
+
+      /* Form Styles */
+      .form-group {
+        margin-bottom: var(--spacing-md);
+      }
+
+      .form-group label {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: 500;
+        color: var(--neutral-dark);
+        font-family: var(--font-heading);
+      }
+
+      .form-group input,
+      .form-group select,
+      .form-group textarea {
+        width: 100%;
+        padding: 14px 16px;
+        border: 1px solid #e5e7eb;
+        border-radius: var(--radius-md);
+        font-family: var(--font-body);
+        font-size: 1rem;
+        transition: var(--transition-fast);
+        background-color: var(--neutral-light);
+      }
+
+      .form-group input:focus,
+      .form-group select:focus,
+      .form-group textarea:focus {
+        outline: none;
+        border-color: var(--primary-green);
+        box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.1);
+        background-color: var(--neutral-white);
+      }
+
+      .form-group.checkbox {
+        display: flex;
+        align-items: flex-start;
+        gap: 10px;
+        margin-top: var(--spacing-md);
+      }
+
+      .form-group.checkbox input {
+        width: auto;
+        margin-top: 5px;
+      }
+
+      .form-group.checkbox label {
+        margin-bottom: 0;
+        font-size: 0.9rem;
+        color: var(--neutral-medium);
+      }
+
+      .char-counter {
+        font-size: 0.8rem;
+        color: var(--neutral-medium);
+        text-align: right;
+        margin-top: 5px;
+      }
+
+      /* Map Styles */
+      .map-wrapper {
+        margin-bottom: var(--spacing-lg);
+        border-radius: var(--radius-md);
+        overflow: hidden;
+        box-shadow: var(--shadow-light);
+      }
+
+      .map-wrapper iframe {
+        width: 100%;
+        height: 300px;
+        border: none;
+        display: block;
+      }
+
+      /* Direct Contact */
+      .direct-contact {
+        margin-top: var(--spacing-lg);
+      }
+
+      .direct-contact h4 {
+        color: var(--primary-blue);
+        margin-bottom: var(--spacing-md);
+        font-size: 1.2rem;
+      }
+
+      .contact-item {
+        display: flex;
+        align-items: flex-start;
+        gap: 15px;
+        margin-bottom: var(--spacing-md);
+        padding: var(--spacing-md);
+        background-color: var(--neutral-light);
+        border-radius: var(--radius-md);
+        transition: var(--transition-medium);
+      }
+
+      .contact-item:hover {
+        background-color: #f0fdf4;
+        transform: translateX(5px);
+      }
+
+      .contact-icon {
+        font-size: 1.5rem;
+        color: var(--primary-green);
+        flex-shrink: 0;
+        margin-top: 3px;
+      }
+
+      .contact-details h5 {
+        margin-bottom: 5px;
+        color: var(--primary-blue);
+        font-size: 1.1rem;
+      }
+
+      .contact-details p {
+        margin-bottom: 5px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 0.95rem;
+      }
+
+      .contact-details i {
+        color: var(--neutral-medium);
+        width: 16px;
+      }
+
+      /* FAQ Section */
+      .faq-section {
+        background-color: var(--neutral-light);
+      }
+
+      .faq-container {
+        max-width: 800px;
+        margin: 0 auto;
+      }
+
+      .faq-item {
+        margin-bottom: var(--spacing-sm);
+        border: 1px solid #e5e7eb;
+        border-radius: var(--radius-md);
+        overflow: hidden;
+        background-color: var(--neutral-white);
+      }
+
+      .faq-question {
+        width: 100%;
+        padding: var(--spacing-md);
+        background-color: var(--neutral-white);
+        border: none;
+        text-align: left;
+        font-family: var(--font-body);
+        font-size: 1rem;
+        font-weight: 500;
+        color: var(--neutral-dark);
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        transition: var(--transition-fast);
+      }
+
+      .faq-question:hover {
+        background-color: #f9fafb;
+      }
+
+      .faq-question.active {
+        background-color: var(--primary-blue);
+        color: var(--neutral-white);
+      }
+
+      .faq-question i {
+        transition: var(--transition-fast);
+      }
+
+      .faq-question.active i {
+        transform: rotate(180deg);
+      }
+
+      .faq-answer {
+        padding: 0 var(--spacing-md);
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+        background-color: #f9fafb;
+      }
+
+      .faq-answer.active {
+        padding: var(--spacing-md);
+        max-height: 500px;
+      }
+
+      /* Social Media Section */
+      .social-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: var(--spacing-lg);
+      }
+
+      .social-card {
+        display: flex;
+        align-items: center;
+        gap: var(--spacing-md);
+        padding: var(--spacing-lg);
+        border-radius: var(--radius-lg);
+        color: var(--neutral-white);
+        text-decoration: none;
+        transition: var(--transition-medium);
+      }
+
+      .social-card:hover {
+        transform: translateY(-5px);
+        box-shadow: var(--shadow-medium);
+      }
+
+      .social-card.facebook {
+        background-color: #3b5998;
+      }
+
+      .social-card.instagram {
+        background: linear-gradient(
+          45deg,
+          #405de6,
+          #5851db,
+          #833ab4,
+          #c13584,
+          #e1306c,
+          #fd1d1d
+        );
+      }
+
+      .social-card.youtube {
+        background-color: #ff0000;
+      }
+
+      .social-card.linkedin {
+        background-color: #0077b5;
+      }
+
+      .social-icon {
+        font-size: 2rem;
+      }
+
+      .social-info h4 {
+        color: var(--neutral-white);
+        margin-bottom: 5px;
+        font-size: 1.2rem;
+      }
+
+      .social-info p {
+        color: rgba(255, 255, 255, 0.9);
+        font-size: 0.9rem;
+        margin-bottom: 5px;
+      }
+
+      .social-handle {
+        font-size: 0.9rem;
+        opacity: 0.8;
+      }
+
+      /* Contact CTA */
+      .contact-cta {
+        background: linear-gradient(
+          135deg,
+          var(--primary-green) 0%,
+          var(--primary-blue) 100%
+        );
+        color: var(--neutral-white);
+        text-align: center;
+        padding: var(--spacing-xl) 0;
+      }
+
+      .contact-cta h3 {
+        color: var(--neutral-white);
+        margin-bottom: var(--spacing-sm);
+      }
+
+      .contact-cta p {
+        color: rgba(255, 255, 255, 0.9);
+        max-width: 700px;
+        margin: 0 auto var(--spacing-lg);
+      }
+
+      .cta-buttons {
+        display: flex;
+        gap: var(--spacing-md);
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+
+      /* Footer */
+      .footer {
+        background-color: var(--primary-blue);
+        color: var(--neutral-white);
+        padding: var(--spacing-xl) 0 var(--spacing-md);
+        position: relative;
+      }
+
+      .footer::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 4px;
+        background: linear-gradient(
+          90deg,
+          var(--primary-green),
+          var(--accent-orange)
+        );
+      }
+
+      .footer-content {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: var(--spacing-xl);
+        margin-bottom: var(--spacing-xl);
+      }
+
+      .footer-brand h3 {
+        color: var(--neutral-white);
+        margin-bottom: var(--spacing-sm);
+        font-size: 1.4rem;
+      }
+
+      .footer-brand span {
+        color: var(--primary-green);
+        display: block;
+        font-size: 0.8rem;
+        margin-top: 2px;
+        letter-spacing: 1px;
+      }
+
+      .footer-brand p {
+        color: rgba(255, 255, 255, 0.8);
+        margin-bottom: var(--spacing-md);
+        font-size: 0.95rem;
+      }
+
+      .social-icons {
+        display: flex;
+        gap: 15px;
+      }
+
+      .social-icons a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 40px;
+        height: 40px;
+        background-color: rgba(255, 255, 255, 0.1);
+        border-radius: 50%;
+        transition: var(--transition-medium);
+        color: var(--neutral-white);
+        text-decoration: none;
+      }
+
+      .social-icons a:hover {
+        background-color: var(--primary-green);
+        transform: translateY(-5px);
+      }
+
+      .footer-links h4,
+      .footer-contact h4 {
+        color: var(--neutral-white);
+        margin-bottom: var(--spacing-md);
+        font-size: 1.2rem;
+        position: relative;
+        padding-bottom: 10px;
+      }
+
+      .footer-links h4::after,
+      .footer-contact h4::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 40px;
+        height: 2px;
+        background-color: var(--primary-green);
+      }
+
+      .footer-links ul li {
+        margin-bottom: 10px;
+      }
+
+      .footer-links ul li a {
+        color: rgba(255, 255, 255, 0.8);
+        transition: var(--transition-fast);
+        display: inline-block;
+      }
+
+      .footer-links ul li a:hover {
+        color: var(--primary-green);
+        transform: translateX(5px);
+      }
+
+      .footer-contact p {
+        color: rgba(255, 255, 255, 0.8);
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 10px;
+        font-size: 0.95rem;
+      }
+
+      .footer-contact i {
+        color: var(--primary-green);
+        width: 20px;
+      }
+
+      .footer-bottom {
+        text-align: center;
+        padding-top: var(--spacing-md);
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        color: rgba(255, 255, 255, 0.6);
+        font-size: 0.9rem;
+      }
+
+      /* Responsive Design */
+      @media screen and (max-width: 992px) {
+        h1 {
+          font-size: 2rem;
+        }
+        h2 {
+          font-size: 1.8rem;
+        }
+        h3 {
+          font-size: 1.6rem;
+        }
+
+        .page-header h2 {
+          font-size: 2.2rem;
+        }
+
+        .contact-container {
+          grid-template-columns: 1fr;
+          gap: var(--spacing-lg);
+        }
+
+        .section {
+          padding: var(--spacing-lg) 0;
+        }
+
+        .section-header {
+          margin-bottom: var(--spacing-lg);
+        }
+      }
+
+      @media screen and (max-width: 768px) {
+        .hamburger {
+          display: flex;
+        }
+
+        .nav-menu {
+          position: fixed;
+          top: 70px;
+          left: -100%;
+          flex-direction: column;
+          background-color: var(--neutral-white);
+          width: 100%;
+          text-align: center;
+          padding: var(--spacing-lg) 0;
+          box-shadow: var(--shadow-medium);
+          transition: var(--transition-medium);
+          z-index: 999;
+          gap: 0;
+        }
+
+        .nav-menu.active {
+          left: 0;
+        }
+
+        .nav-item {
+          margin: 0;
+          border-bottom: 1px solid var(--neutral-light);
+        }
+
+        .nav-link {
+          display: block;
+          padding: 15px 20px;
+          font-size: 1rem;
+        }
+
+        .nav-link.active::after {
+          display: none;
+        }
+
+        .nav-link.active {
+          background-color: var(--primary-blue);
+          color: var(--neutral-white);
+        }
+
+        .page-header {
+          padding: calc(var(--spacing-lg) + 20px) 0;
+          margin-top: 60px;
+        }
+
+        .page-header h2 {
+          font-size: 1.8rem;
+        }
+
+        .page-header p {
+          font-size: 1rem;
+        }
+
+        .cta-buttons {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .btn {
+          width: 100%;
+          max-width: 300px;
+        }
+
+        .info-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .contact-form-container,
+        .contact-info-container {
+          padding: var(--spacing-lg);
+        }
+      }
+
+      @media screen and (max-width: 576px) {
+        .container {
+          padding: 0 var(--spacing-md);
+        }
+
+        .section {
+          padding: var(--spacing-xl) 0;
+        }
+
+        .logo h1 {
+          font-size: 1.2rem;
+        }
+
+        .logo span {
+          font-size: 0.6rem;
+        }
+
+        .page-header h2 {
+          font-size: 1.6rem;
+        }
+
+        .social-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .footer-content {
+          grid-template-columns: 1fr;
+          gap: var(--spacing-lg);
+        }
+      }
+
+      /* Additional styles for better UX */
+      .form-group input:invalid,
+      .form-group textarea:invalid {
+        border-color: #ef4444;
+      }
+
+      .form-group input:valid,
+      .form-group textarea:valid {
+        border-color: #10b981;
+      }
+
+      .success-message {
+        background-color: #d1fae5;
+        color: #065f46;
+        padding: var(--spacing-md);
+        border-radius: var(--radius-md);
+        margin-top: var(--spacing-md);
+        display: none;
+      }
+
+      .error-message {
+        background-color: #fee2e2;
+        color: #991b1b;
+        padding: var(--spacing-md);
+        border-radius: var(--radius-md);
+        margin-top: var(--spacing-md);
+        display: none;
+      }
+
+      /* Loading spinner */
+      .spinner {
+        display: none;
+        width: 40px;
+        height: 40px;
+        margin: 10px auto;
+        border: 4px solid #f3f3f3;
+        border-top: 4px solid var(--primary-green);
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+      }
+
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+
+      /* Footer brand layout */
+      .footer-brand {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      /* Footer logo fit */
+      .footer-brand img {
+        max-width: 120px; /* adjust size if needed */
+        height: auto;
+        object-fit: contain;
+        margin-bottom: 10px;
+      }
+
+      /* Footer title */
+      .footer-brand h3 {
+        font-size: 20px;
+        line-height: 1.3;
+        margin-bottom: 6px;
+      }
+
+      .footer-brand h3 span {
+        display: block;
+        font-size: 12px;
+        font-weight: normal;
+        letter-spacing: 1px;
+      }
+
+      /* Responsive */
+      @media (max-width: 768px) {
+        .footer-brand img {
+          max-width: 90px;
+        }
+
+        .footer-brand h3 {
+          font-size: 18px;
+        }
+      }
+
+      /* Logo container */
+      .logo {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      /* Logo image fit */
+      .logo img {
+        height: 60px; /* adjust as needed */
+        width: auto; /* keeps aspect ratio */
+        object-fit: contain;
+      }
+
+      /* Text styling */
+      .logo h1 {
+        font-size: 22px;
+        line-height: 1.2;
+      }
+
+      .logo h1 span {
+        display: block;
+        font-size: 12px;
+        font-weight: normal;
+        letter-spacing: 1px;
+      }
+      @media (max-width: 768px) {
+        .logo img {
+          height: 45px;
+        }
+
+        .logo h1 {
+          font-size: 18px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header / Navigation -->
+    <header class="header">
+      <div class="container">
+        <nav class="navbar">
+          <a href="index.html" class="logo">
+            <img src="./images/logo@.png" alt="" />
+            <h1>ASHOK SINGH<br /><span>EDUCATIONAL FOUNDATION</span></h1>
+          </a>
+
+          <ul class="nav-menu">
+            <li class="nav-item">
+              <a href="index.html" class="nav-link">Home</a>
+            </li>
+            <li class="nav-item">
+              <a href="about.html" class="nav-link">About</a>
+            </li>
+            <li class="nav-item">
+              <a href="work.html" class="nav-link">Our Work</a>
+            </li>
+            <li class="nav-item">
+              <a href="programs.html" class="nav-link">Programs</a>
+            </li>
+            <li class="nav-item">
+              <a href="gallery.html" class="nav-link">Gallery</a>
+            </li>
+            <li class="nav-item">
+              <a href="donate.html" class="nav-link">Donate</a>
+            </li>
+            <li class="nav-item">
+              <a href="why-support.html" class="nav-link">Why Support</a>
+            </li>
+            <li class="nav-item">
+              <a href="contact.html" class="nav-link active">Contact</a>
+            </li>
+          </ul>
+
+          <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+      <div class="container">
+        <h2>Contact Us</h2>
+        <p>Get in touch with Ashok Singh Educational Foundation</p>
+      </div>
+    </section>
+
+    <!-- Contact Information -->
+    <section class="section contact-info">
+      <div class="container">
+        <div class="section-header">
+          <h3>Get in Touch</h3>
+          <p>Multiple ways to connect with us</p>
+        </div>
+        <div class="info-grid">
+          <div class="info-card">
+            <div class="info-icon">
+              <i class="fas fa-map-marker-alt"></i>
+            </div>
+            <h4>Our Location</h4>
+            <p>
+              Ashok Singh Educational Foundation<br />
+              Deoghar, Jharkhand<br />
+              India - 814112
+            </p>
+            <a
+              href="https://maps.google.com/?q=Deoghar+Jharkhand+India"
+              target="_blank"
+              class="btn btn-primary btn-small"
+            >
+              <i class="fas fa-map"></i> View on Map
+            </a>
+          </div>
+
+          <div class="info-card">
+            <div class="info-icon">
+              <i class="fas fa-phone"></i>
+            </div>
+            <h4>Call Us</h4>
+            <p>
+              Ashok Kumar Singh: +91 9749417834<br />
+              Krishna Kumar Singh: +91 9434383946<br />
+              Monday-Saturday: 9 AM - 6 PM
+            </p>
+            <a href="tel:+919749417834" class="btn btn-primary btn-small">
+              <i class="fas fa-phone-alt"></i> Call Now
+            </a>
+          </div>
+
+          <div class="info-card">
+            <div class="info-icon">
+              <i class="fas fa-envelope"></i>
+            </div>
+            <h4>Email Us</h4>
+            <p>
+              General: contact@ashoksinghef.org<br />
+              Donations: donation@ashoksinghef.org<br />
+              Volunteering: volunteer@ashoksinghef.org
+            </p>
+            <a
+              href="mailto:contact@ashoksinghef.org"
+              class="btn btn-primary btn-small"
+            >
+              <i class="fas fa-paper-plane"></i> Send Email
+            </a>
+          </div>
+
+          <div class="info-card">
+            <div class="info-icon">
+              <i class="fas fa-clock"></i>
+            </div>
+            <h4>Office Hours</h4>
+            <p>
+              Monday - Saturday: 9 AM - 6 PM<br />
+              Sunday: By appointment only<br />
+              Festival holidays may vary
+            </p>
+            <a href="#contact-form" class="btn btn-primary btn-small">
+              <i class="fas fa-calendar-alt"></i> Schedule Visit
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Form & Map -->
+    <section class="section contact-main">
+      <div class="container">
+        <div class="contact-container">
+          <div class="contact-form-container" id="contact-form">
+            <h3>Send Us a Message</h3>
+            <p>
+              Fill out the form below and we'll get back to you within 24-48
+              hours.
+            </p>
+
+            <form id="contactForm" class="contact-form">
+              <div class="form-group">
+                <label for="name">Full Name *</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  required
+                  placeholder="Enter your full name"
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="email">Email Address *</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  required
+                  placeholder="Enter your email address"
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="phone">Phone Number *</label>
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  required
+                  placeholder="Enter your 10-digit phone number"
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="subject">Subject *</label>
+                <select id="subject" name="subject" required>
+                  <option value="" disabled selected>
+                    Select inquiry type
+                  </option>
+                  <option value="donation">Donation Inquiry</option>
+                  <option value="volunteer">Volunteering</option>
+                  <option value="partnership">Partnership/Collaboration</option>
+                  <option value="child-sponsorship">Child Sponsorship</option>
+                  <option value="visit">Schedule a Visit</option>
+                  <option value="general">General Inquiry</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="message">Your Message *</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="5"
+                  required
+                  placeholder="Tell us how we can help you..."
+                ></textarea>
+                <div class="char-counter">0/500 characters</div>
+              </div>
+
+              <div class="form-group checkbox">
+                <input type="checkbox" id="newsletter" name="newsletter" />
+                <label for="newsletter"
+                  >Subscribe to our newsletter for updates on our programs and
+                  impact</label
+                >
+              </div>
+
+              <div class="spinner" id="formSpinner"></div>
+              <div class="success-message" id="successMessage">
+                <i class="fas fa-check-circle"></i> Thank you! Your message has
+                been sent successfully.
+              </div>
+              <div class="error-message" id="errorMessage">
+                <i class="fas fa-exclamation-circle"></i> There was an error
+                sending your message. Please try again.
+              </div>
+
+              <button type="submit" class="btn btn-primary">
+                <i class="fas fa-paper-plane"></i> Send Message
+              </button>
+            </form>
+          </div>
+
+          <div class="contact-info-container">
+            <h3>Find Us</h3>
+            <div class="map-wrapper">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3630.834773725882!2d86.69668647535457!3d24.491895978174427!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f1a6e30c5335e5%3A0x5c5c2b79c6d63f32!2sDeoghar%2C%20Jharkhand!5e0!3m2!1sen!2sin!4v1688399876543!5m2!1sen!2sin"
+                width="100%"
+                height="300"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                title="Ashok Singh Educational Foundation Location in Deoghar, Jharkhand"
+              >
+              </iframe>
+            </div>
+
+            <div class="direct-contact">
+              <h4>Direct Contact with Founders</h4>
+
+              <div class="contact-item">
+                <div class="contact-icon">
+                  <i class="fas fa-user-tie"></i>
+                </div>
+                <div class="contact-details">
+                  <h5>Ashok Kumar Singh</h5>
+                  <p><i class="fas fa-phone"></i> +91 9749417834</p>
+                  <p><i class="fas fa-envelope"></i> ashok@ashoksinghef.org</p>
+                  <p>
+                    Available for strategic partnerships and major donor
+                    discussions
+                  </p>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <div class="contact-icon">
+                  <i class="fas fa-user-tie"></i>
+                </div>
+                <div class="contact-details">
+                  <h5>Krishna Kumar Singh</h5>
+                  <p><i class="fas fa-phone"></i> +91 9434383946</p>
+                  <p>
+                    <i class="fas fa-envelope"></i> krishna@ashoksinghef.org
+                  </p>
+                  <p>
+                    Available for program-related discussions and volunteer
+                    coordination
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section faq-section">
+      <div class="container">
+        <div class="section-header">
+          <h3>Frequently Asked Questions</h3>
+          <p>Quick answers to common questions</p>
+        </div>
+        <div class="faq-container">
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>Can I visit your programs in Deoghar?</span>
+              <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Yes, we welcome visitors to our programs in Deoghar. Please
+                schedule your visit at least one week in advance by contacting
+                us via phone or the contact form above. We recommend visits on
+                weekdays between 10 AM and 4 PM.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>How can I volunteer with your foundation?</span>
+              <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="faq-answer">
+              <p>
+                We welcome volunteers in various capacities: teaching,
+                mentoring, administrative support, event organization, and more.
+                Please fill out the contact form indicating your interest in
+                volunteering, and we'll get back to you with available
+                opportunities.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>Do you provide donation receipts for tax purposes?</span>
+              <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Yes, we provide official donation receipts for all donations
+                above ₹500. As a registered 80G organization, donations to our
+                foundation are eligible for 50% tax exemption under Section 80G
+                of the Income Tax Act, 1961.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>Can I sponsor a specific child's education?</span>
+              <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Yes, we have a Child Education Sponsorship Program where you can
+                sponsor a specific child's complete education. You'll receive
+                regular updates about the child's progress. Please indicate your
+                interest in child sponsorship in the contact form.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span
+                >Do you accept donations in kind (books, clothes, etc.)?</span
+              >
+              <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Yes, we accept donations in kind such as educational books,
+                stationery, school uniforms, and educational toys. Please
+                contact us before sending any materials to ensure they align
+                with our current needs.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>How can my company partner with your foundation?</span>
+              <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="faq-answer">
+              <p>
+                We welcome corporate partnerships through CSR initiatives,
+                employee volunteering programs, cause-related marketing, and
+                event sponsorships. Please contact Ashok Kumar Singh directly at
+                +91 9749417834 for corporate partnership discussions.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Social Media -->
+    <section class="section social-media">
+      <div class="container">
+        <div class="section-header">
+          <h3>Connect With Us on Social Media</h3>
+          <p>Follow our journey and stay updated</p>
+        </div>
+        <div class="social-grid">
+          <a href="#" class="social-card facebook">
+            <div class="social-icon">
+              <i class="fab fa-facebook-f"></i>
+            </div>
+            <div class="social-info">
+              <h4>Facebook</h4>
+              <p>Daily updates, photos, and stories</p>
+              <span class="social-handle">@AshokSinghEF</span>
+            </div>
+          </a>
+
+          <a href="#" class="social-card instagram">
+            <div class="social-icon">
+              <i class="fab fa-instagram"></i>
+            </div>
+            <div class="social-info">
+              <h4>Instagram</h4>
+              <p>Visual stories from our programs</p>
+              <span class="social-handle">@ashoksinghef</span>
+            </div>
+          </a>
+
+          <a href="#" class="social-card youtube">
+            <div class="social-icon">
+              <i class="fab fa-youtube"></i>
+            </div>
+            <div class="social-info">
+              <h4>YouTube</h4>
+              <p>Video documentation of our work</p>
+              <span class="social-handle">Ashok Singh EF</span>
+            </div>
+          </a>
+
+          <a href="#" class="social-card linkedin">
+            <div class="social-icon">
+              <i class="fab fa-linkedin-in"></i>
+            </div>
+            <div class="social-info">
+              <h4>LinkedIn</h4>
+              <p>Professional updates and partnerships</p>
+              <span class="social-handle"
+                >Ashok Singh Educational Foundation</span
+              >
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact CTA -->
+    <section class="section contact-cta">
+      <div class="container">
+        <div class="cta-content">
+          <h3>Have More Questions?</h3>
+          <p>
+            We're here to help. Don't hesitate to reach out for any
+            clarification or additional information you may need.
+          </p>
+          <div class="cta-buttons">
+            <a href="tel:+919749417834" class="btn btn-primary">
+              <i class="fas fa-phone-alt"></i> Call Us Now
+            </a>
+            <a href="mailto:contact@ashoksinghef.org" class="btn btn-secondary">
+              <i class="fas fa-envelope"></i> Send an Email
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-brand">
+            <img src="./images/logo@.png" alt="" />
+            <h3>ASHOK SINGH<br /><span>EDUCATIONAL FOUNDATION</span></h3>
+            <p>Empowering Underprivileged Children Through Education</p>
+            <div class="social-icons">
+              <a href="#" aria-label="Facebook"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a href="#" aria-label="Instagram"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a href="#" aria-label="Twitter"
+                ><i class="fab fa-twitter"></i
+              ></a>
+              <a href="#" aria-label="YouTube"
+                ><i class="fab fa-youtube"></i
+              ></a>
+            </div>
+          </div>
+          <div class="footer-links">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="work.html">Our Work</a></li>
+              <li><a href="programs.html">Programs</a></li>
+              <li><a href="donate.html">Donate</a></li>
+            </ul>
+          </div>
+          <div class="footer-contact">
+            <h4>Contact Us</h4>
+            <p><i class="fas fa-user"></i> Ashok Kumar Singh</p>
+            <p><i class="fas fa-user"></i> Krishna Kumar Singh</p>
+            <p>
+              <i class="fas fa-map-marker-alt"></i> Deoghar, Jharkhand, India
+            </p>
+            <p><i class="fas fa-phone"></i> +91 9749417834</p>
+            <p><i class="fas fa-phone"></i> +91 9434383946</p>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>
+            &copy; 2023 Ashok Singh Educational Foundation. All rights reserved.
+            | Registered NGO under Indian Trust Act | 80G Certified
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Mobile Navigation Toggle
+      const hamburger = document.querySelector(".hamburger");
+      const navMenu = document.querySelector(".nav-menu");
+
+      hamburger.addEventListener("click", () => {
+        hamburger.classList.toggle("active");
+        navMenu.classList.toggle("active");
+      });
+
+      // Close mobile menu when clicking on a link
+      document.querySelectorAll(".nav-link").forEach((n) =>
+        n.addEventListener("click", () => {
+          hamburger.classList.remove("active");
+          navMenu.classList.remove("active");
+        })
+      );
+
+      // FAQ Accordion
+      document.addEventListener("DOMContentLoaded", function () {
+        const faqQuestions = document.querySelectorAll(".faq-question");
+
+        faqQuestions.forEach((question) => {
+          question.addEventListener("click", function () {
+            // Toggle active class on question
+            this.classList.toggle("active");
+
+            // Get the answer element
+            const answer = this.nextElementSibling;
+
+            // Toggle answer visibility
+            if (answer.style.maxHeight) {
+              answer.style.maxHeight = null;
+              answer.classList.remove("active");
+            } else {
+              answer.style.maxHeight = answer.scrollHeight + "px";
+              answer.classList.add("active");
+            }
+
+            // Close other FAQ items
+            faqQuestions.forEach((otherQuestion) => {
+              if (
+                otherQuestion !== this &&
+                otherQuestion.classList.contains("active")
+              ) {
+                otherQuestion.classList.remove("active");
+                const otherAnswer = otherQuestion.nextElementSibling;
+                otherAnswer.style.maxHeight = null;
+                otherAnswer.classList.remove("active");
+              }
+            });
+          });
+        });
+
+        // Character counter for message textarea
+        const messageTextarea = document.getElementById("message");
+        const charCounter = document.querySelector(".char-counter");
+
+        if (messageTextarea && charCounter) {
+          messageTextarea.addEventListener("input", function () {
+            const count = this.value.length;
+            charCounter.textContent = `${count}/500 characters`;
+
+            if (count > 500) {
+              this.value = this.value.substring(0, 500);
+              charCounter.textContent = "500/500 characters";
+              charCounter.style.color = "#EF4444";
+            } else if (count > 450) {
+              charCounter.style.color = "#EF4444";
+            } else if (count > 400) {
+              charCounter.style.color = "#F59E0B";
+            } else {
+              charCounter.style.color = "#6B7280";
+            }
+          });
+        }
+
+        // Form submission
+        const contactForm = document.getElementById("contactForm");
+        const formSpinner = document.getElementById("formSpinner");
+        const successMessage = document.getElementById("successMessage");
+        const errorMessage = document.getElementById("errorMessage");
+
+        if (contactForm) {
+          contactForm.addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            // Show spinner
+            formSpinner.style.display = "block";
+            successMessage.style.display = "none";
+            errorMessage.style.display = "none";
+
+            // Simulate form submission (replace with actual AJAX call)
+            setTimeout(() => {
+              formSpinner.style.display = "none";
+
+              // For demo purposes, always show success
+              // In real implementation, check response status
+              successMessage.style.display = "block";
+
+              // Reset form after successful submission
+              contactForm.reset();
+              charCounter.textContent = "0/500 characters";
+              charCounter.style.color = "#6B7280";
+
+              // Scroll to success message
+              successMessage.scrollIntoView({
+                behavior: "smooth",
+                block: "nearest",
+              });
+
+              // Hide success message after 5 seconds
+              setTimeout(() => {
+                successMessage.style.display = "none";
+              }, 5000);
+            }, 1500);
+          });
+        }
+
+        // Form validation for phone number
+        const phoneInput = document.getElementById("phone");
+        if (phoneInput) {
+          phoneInput.addEventListener("input", function () {
+            // Remove non-numeric characters
+            this.value = this.value.replace(/\D/g, "");
+
+            // Limit to 10 digits
+            if (this.value.length > 10) {
+              this.value = this.value.substring(0, 10);
+            }
+          });
+        }
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+          anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+
+            const targetId = this.getAttribute("href");
+            if (targetId === "#") return;
+
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+              const headerHeight =
+                document.querySelector(".header").offsetHeight;
+              const targetPosition =
+                targetElement.getBoundingClientRect().top +
+                window.pageYOffset -
+                headerHeight;
+
+              window.scrollTo({
+                top: targetPosition,
+                behavior: "smooth",
+              });
+            }
+          });
+        });
+
+        // Add active class to nav link on scroll
+        const sections = document.querySelectorAll("section[id]");
+        window.addEventListener("scroll", () => {
+          const scrollY = window.pageYOffset;
+
+          sections.forEach((section) => {
+            const sectionHeight = section.offsetHeight;
+            const sectionTop = section.offsetTop - 100;
+            const sectionId = section.getAttribute("id");
+
+            if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+              document
+                .querySelector(`.nav-menu a[href*=${sectionId}]`)
+                ?.classList.add("active");
+            } else {
+              document
+                .querySelector(`.nav-menu a[href*=${sectionId}]`)
+                ?.classList.remove("active");
+            }
+          });
+        });
+      });
+
+      // Add header scroll effect
+      window.addEventListener("scroll", () => {
+        const header = document.querySelector(".header");
+        if (window.scrollY > 50) {
+          header.style.boxShadow = "0 4px 20px rgba(0, 0, 0, 0.15)";
+          header.style.padding = "10px 0";
+        } else {
+          header.style.boxShadow = "0 2px 10px rgba(0, 0, 0, 0.1)";
+          header.style.padding = "15px 0";
+        }
+      });
+    </script>
+  </body>
+</html>
